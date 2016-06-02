@@ -6,10 +6,10 @@ class Dart < Formula
   version '1.15.0'
   if MacOS.prefer_64_bit?
     url 'https://storage.googleapis.com/dart-archive/channels/stable/release/1.15.0/sdk/dartsdk-macos-x64-release.zip'
-    sha256 '612d484a848d29811d1ca40d9ebc23a17f05d24522ca204ace03d792fb8a9fdc'
+    sha256 'b15a637c7addb8835c4961831c2c58276b179acf03bbfdde37821037067f39aa'
   else
     url 'https://storage.googleapis.com/dart-archive/channels/stable/release/1.15.0/sdk/dartsdk-macos-ia32-release.zip'
-    sha256 '20afb6f71fefa88a9747e9dfc35adeab01a03ce3c8d6b6c5b46fede9d9f40555'
+    sha256 '1acd27efc1195a9627fd41f8e9dbf5fde87dbf7f50afb473c172fecbaaef5be8'
   end
 
   option 'with-content-shell', 'Download and install content_shell -- headless Dartium for testing'
@@ -47,7 +47,7 @@ class Dart < Formula
   resource 'dartium' do
     version '1.15.0'
     url 'https://storage.googleapis.com/dart-archive/channels/stable/release/1.15.0/dartium/dartium-macos-ia32-release.zip'
-    sha256 '01ecca7f8dfd2aadcffb9f17ceb181f5f107a1583228f61959c438f2e63ad5f7'
+    sha256 '52e0aeae1ba78cba041444969311f62af7f153893de89fc2ca96a3e627434caa'
   end
 
   def install
@@ -78,7 +78,6 @@ class Dart < Formula
   def caveats; <<-EOS.undent
     Please note the path to the Dart SDK:
       #{opt_libexec}
-
     --with-dartium:
       To use with IntelliJ, set the Dartium execute home to:
         #{opt_prefix}/Chromium.app
